@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>URL</key>
-	<string>https://github.com/lukebarousse/Int_SQL_Project/blob/main/2_cohort_analysis.sql</string>
-</dict>
-</plist>
+SELECT
+    cohort_year,
+    SUM(total_net_revenue) AS total_revenue,
+    COUNT(DISTINCT customerkey) AS total_customers,
+    SUM(total_net_revenue) / COUNT(DISTINCT customerkey) AS customer_revenue
+FROM cohort_analysis
+WHERE orderdate = first_purchase_date
+GROUP BY 
+    cohort_year
