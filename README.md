@@ -4,7 +4,7 @@ In this project, I analyzed customer purchasing behavior using PostgreSQL to bet
 
 The goal was to identify where revenue truly comes from, how customer quality changes over time, and what risks may impact long-term growth.
 
-⸻
+
 
 Customer Segmentation
 
